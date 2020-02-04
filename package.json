@@ -42,7 +42,6 @@
     "common-tags": "^1.8.0",
     "shelljs": "^0.8.3",
     "source-map-support": "^0.5.16",
-    "winston": "^3.2.1",
     "yargs": "^15.1.0"
   }
 }
