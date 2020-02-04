@@ -26,19 +26,8 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: Lint with ESLint
-          command: npx eslint . --ext=".js,.ts" --quiet
-      - run:
-          name: Typecheck with TSC
-          command: npm run typecheck
-      - run:
           name: Test
-          command: npx jest --ci --maxWorkers=2 --reporters="default" --reporters="jest-junit"
-          environment:
-            NODE_ENV: test
-            JEST_JUNIT_OUTPUT_NAME: "reports/jest/result.xml"
-      - store_test_results:
-          path: reports
+          command: npm test
       - run:
           name: Build
           command: npm run build
